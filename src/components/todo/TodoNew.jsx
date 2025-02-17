@@ -7,7 +7,7 @@ const ToDoNew = (props) => {
     alert("click");
   };
   const handleOnChange = (name) => {
-    console.log("change", name);
+    console.log("change event", name);
   };
   return (
     <div>
