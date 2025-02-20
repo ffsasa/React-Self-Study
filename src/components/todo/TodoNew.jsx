@@ -3,12 +3,13 @@ import { useState } from "react";
 const ToDoNew = (props) => {
   // const valueInput = "vu";
 
-  const { addNewTodo, name } = props;
+  const { addNewTodo} = props;
 
   const [valueInput, setValueInput] = useState("eric");
 
   const handleClick = () => {
-    alert("click");
+    addNewTodo(valueInput);
+    setValueInput("")
   };
   const handleOnChange = (name) => {
     console.log("change event", name);
@@ -19,6 +20,8 @@ const ToDoNew = (props) => {
       <input
         type="text"
         onChange={(event) => handleOnChange(event.target.value)}
+        value={valueInput}
+
       />
       <button style={{ cursor: "pointer" }} onClick={handleClick}>
         Add

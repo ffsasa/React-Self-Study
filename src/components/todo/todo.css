@@ -21,7 +21,7 @@
 .todo-stuff {
   border: 2px solid rgb(194, 192, 192);
   border-radius: 10px;
-  padding: 20px 300px 20px 20px;
+  padding: 20px 20px 20px 20px;
   margin-top: 20px;
 }
 
@@ -36,6 +36,11 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
 }
 
 @keyframes logo-spin {

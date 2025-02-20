@@ -1,9 +1,16 @@
 const TodoStuff = (props) => {
-    console.log(props)
-    const a = props.name
+  
+    const {todoList} = props;
+    console.log(todoList);
     return (
       <div className="todo-stuff">
-        <div>My name is {a}</div>
+        {todoList.map((item, index)=> {
+            return(
+            <div className="todo-item">
+              <div>{item.name}</div>
+              <button>Delete</button>
+            </div>)
+        })}
         <div>Learning React </div>
         <div>Watching youtube</div>
         <div>
